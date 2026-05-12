@@ -1,0 +1,20 @@
+{
+  "method": "diffusion",
+  "input": "data\\processed\\sar_10m.tif",
+  "output": "data\\processed\\filtered\\sar_diffusion.tif",
+  "nonzero_pct": 100.0,
+  "p2": 0.010989421047270298,
+  "p50": 0.09841139614582062,
+  "p98": 0.4298325181007385,
+  "max": 2.2216742038726807,
+  "parameters": {
+    "kernel": 5,
+    "sigma": 1.0,
+    "diameter": 7,
+    "sigma_color": 45.0,
+    "sigma_space": 7.0,
+    "iterations": 12,
+    "kappa": 0.15,
+    "gamma": 0.18
+  }
+}

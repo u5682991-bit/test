@@ -1,0 +1,100 @@
+{
+  "best_by_inliers": {
+    "file": "outputs/hopc\\metrics_hopc_r1.json",
+    "moving": "data\\processed\\sar_10m.tif",
+    "inliers": 71,
+    "matches_after_gate": 392,
+    "inlier_ratio": 0.18112244897959184,
+    "rmse": 2.6298389434814453,
+    "translation_pixels": 2.5651264349111265,
+    "scale_x": 0.9988100778308083,
+    "scale_y": 0.9988100778308083,
+    "near_identity": true
+  },
+  "best_by_rmse_with_min_20_inliers": {
+    "file": "outputs/hopc\\metrics_hopc_r4.json",
+    "moving": "data\\processed\\sar_10m.tif",
+    "inliers": 43,
+    "matches_after_gate": 351,
+    "inlier_ratio": 0.1225071225071225,
+    "rmse": 1.9888235330581665,
+    "translation_pixels": 7.683623486537741,
+    "scale_x": 0.9985723637068828,
+    "scale_y": 0.9985723637068828,
+    "near_identity": true
+  },
+  "rows": [
+    {
+      "file": "outputs/hopc\\metrics_hopc_r1.json",
+      "moving": "data\\processed\\sar_10m.tif",
+      "inliers": 71,
+      "matches_after_gate": 392,
+      "inlier_ratio": 0.18112244897959184,
+      "rmse": 2.6298389434814453,
+      "translation_pixels": 2.5651264349111265,
+      "scale_x": 0.9988100778308083,
+      "scale_y": 0.9988100778308083,
+      "near_identity": true
+    },
+    {
+      "file": "outputs/hopc\\metrics_hopc_r2.json",
+      "moving": "data\\processed\\sar_10m.tif",
+      "inliers": 30,
+      "matches_after_gate": 312,
+      "inlier_ratio": 0.09615384615384616,
+      "rmse": 2.7305426597595215,
+      "translation_pixels": 12.302623181103176,
+      "scale_x": 1.0002144455570858,
+      "scale_y": 1.0002144455570858,
+      "near_identity": true
+    },
+    {
+      "file": "outputs/hopc\\metrics_hopc_r3.json",
+      "moving": "data\\processed\\sar_10m.tif",
+      "inliers": 40,
+      "matches_after_gate": 374,
+      "inlier_ratio": 0.10695187165775401,
+      "rmse": 2.627232551574707,
+      "translation_pixels": 10.08844587234527,
+      "scale_x": 0.9907419085098753,
+      "scale_y": 0.9907419085098753,
+      "near_identity": true
+    },
+    {
+      "file": "outputs/hopc\\metrics_hopc_r4.json",
+      "moving": "data\\processed\\sar_10m.tif",
+      "inliers": 43,
+      "matches_after_gate": 351,
+      "inlier_ratio": 0.1225071225071225,
+      "rmse": 1.9888235330581665,
+      "translation_pixels": 7.683623486537741,
+      "scale_x": 0.9985723637068828,
+      "scale_y": 0.9985723637068828,
+      "near_identity": true
+    },
+    {
+      "file": "outputs/hopc\\metrics_hopc_r5.json",
+      "moving": "data\\processed\\sar_10m.tif",
+      "inliers": 20,
+      "matches_after_gate": 93,
+      "inlier_ratio": 0.21505376344086022,
+      "rmse": 2.5202982425689697,
+      "translation_pixels": 0.8001398166263793,
+      "scale_x": 0.999616783495316,
+      "scale_y": 0.999616783495316,
+      "near_identity": true
+    },
+    {
+      "file": "outputs/hopc\\metrics_hopc_r6_median.json",
+      "moving": "data\\processed\\filtered\\sar_median.tif",
+      "inliers": 54,
+      "matches_after_gate": 373,
+      "inlier_ratio": 0.1447721179624665,
+      "rmse": 2.7477266788482666,
+      "translation_pixels": 9.082038278129986,
+      "scale_x": 1.002732193857713,
+      "scale_y": 1.002732193857713,
+      "near_identity": true
+    }
+  ]
+}

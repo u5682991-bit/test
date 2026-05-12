@@ -1,0 +1,20 @@
+{
+  "method": "lee",
+  "input": "data\\processed\\sar_10m.tif",
+  "output": "data\\processed\\filtered\\sar_lee.tif",
+  "nonzero_pct": 100.0,
+  "p2": 0.009249724447727203,
+  "p50": 0.08829253539443016,
+  "p98": 0.4437043368816376,
+  "max": 681.5991821289062,
+  "parameters": {
+    "kernel": 5,
+    "sigma": 1.0,
+    "diameter": 7,
+    "sigma_color": 45.0,
+    "sigma_space": 7.0,
+    "iterations": 12,
+    "kappa": 0.15,
+    "gamma": 0.18
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "method": "bilateral",
+  "input": "data\\processed\\sar_10m.tif",
+  "output": "data\\processed\\filtered\\sar_bilateral.tif",
+  "nonzero_pct": 100.0,
+  "p2": 0.010090569034218788,
+  "p50": 0.09417258948087692,
+  "p98": 0.3879441022872925,
+  "max": 0.6968010663986206,
+  "parameters": {
+    "kernel": 5,
+    "sigma": 1.0,
+    "diameter": 7,
+    "sigma_color": 45.0,
+    "sigma_space": 7.0,
+    "iterations": 12,
+    "kappa": 0.15,
+    "gamma": 0.18
+  }
+}

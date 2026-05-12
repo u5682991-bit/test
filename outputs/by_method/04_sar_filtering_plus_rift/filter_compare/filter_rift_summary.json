@@ -1,0 +1,108 @@
+{
+  "best_by_inliers": {
+    "variant": "raw",
+    "metrics": "outputs/filter_compare\\metrics_raw_rift.json",
+    "moving": "data\\processed\\sar_10m.tif",
+    "inliers": 42,
+    "matches_after_gate": 265,
+    "inlier_ratio": 0.15849056603773584,
+    "rmse": 2.5178427696228027,
+    "translation_pixels": 4.047600889905436,
+    "scale_x": 0.9925959499784377,
+    "scale_y": 0.9925959499784377,
+    "near_identity": true
+  },
+  "best_by_rmse_with_min_20_inliers": {
+    "variant": "median",
+    "metrics": "outputs/filter_compare\\metrics_median_rift.json",
+    "moving": "data\\processed\\filtered\\sar_median.tif",
+    "inliers": 39,
+    "matches_after_gate": 266,
+    "inlier_ratio": 0.14661654135338345,
+    "rmse": 2.305692672729492,
+    "translation_pixels": 7.180243367645434,
+    "scale_x": 0.9912753412303904,
+    "scale_y": 0.9912753412303904,
+    "near_identity": true
+  },
+  "rows": [
+    {
+      "variant": "bilateral",
+      "metrics": "outputs/filter_compare\\metrics_bilateral_rift.json",
+      "moving": "data\\processed\\filtered\\sar_bilateral.tif",
+      "inliers": 40,
+      "matches_after_gate": 239,
+      "inlier_ratio": 0.16736401673640167,
+      "rmse": 2.907074213027954,
+      "translation_pixels": 6.1355231100034935,
+      "scale_x": 0.998568666980236,
+      "scale_y": 0.998568666980236,
+      "near_identity": true
+    },
+    {
+      "variant": "diffusion",
+      "metrics": "outputs/filter_compare\\metrics_diffusion_rift.json",
+      "moving": "data\\processed\\filtered\\sar_diffusion.tif",
+      "inliers": 30,
+      "matches_after_gate": 221,
+      "inlier_ratio": 0.13574660633484162,
+      "rmse": 2.400310754776001,
+      "translation_pixels": 5.10748988923826,
+      "scale_x": 0.9951426329730099,
+      "scale_y": 0.9951426329730099,
+      "near_identity": true
+    },
+    {
+      "variant": "gaussian",
+      "metrics": "outputs/filter_compare\\metrics_gaussian_rift.json",
+      "moving": "data\\processed\\filtered\\sar_gaussian.tif",
+      "inliers": 33,
+      "matches_after_gate": 229,
+      "inlier_ratio": 0.14410480349344978,
+      "rmse": 2.5976674556732178,
+      "translation_pixels": 4.363820441461475,
+      "scale_x": 0.996253675253361,
+      "scale_y": 0.996253675253361,
+      "near_identity": true
+    },
+    {
+      "variant": "lee",
+      "metrics": "outputs/filter_compare\\metrics_lee_rift.json",
+      "moving": "data\\processed\\filtered\\sar_lee.tif",
+      "inliers": 41,
+      "matches_after_gate": 260,
+      "inlier_ratio": 0.1576923076923077,
+      "rmse": 2.7912425994873047,
+      "translation_pixels": 4.550938386364168,
+      "scale_x": 0.990331420082269,
+      "scale_y": 0.990331420082269,
+      "near_identity": true
+    },
+    {
+      "variant": "median",
+      "metrics": "outputs/filter_compare\\metrics_median_rift.json",
+      "moving": "data\\processed\\filtered\\sar_median.tif",
+      "inliers": 39,
+      "matches_after_gate": 266,
+      "inlier_ratio": 0.14661654135338345,
+      "rmse": 2.305692672729492,
+      "translation_pixels": 7.180243367645434,
+      "scale_x": 0.9912753412303904,
+      "scale_y": 0.9912753412303904,
+      "near_identity": true
+    },
+    {
+      "variant": "raw",
+      "metrics": "outputs/filter_compare\\metrics_raw_rift.json",
+      "moving": "data\\processed\\sar_10m.tif",
+      "inliers": 42,
+      "matches_after_gate": 265,
+      "inlier_ratio": 0.15849056603773584,
+      "rmse": 2.5178427696228027,
+      "translation_pixels": 4.047600889905436,
+      "scale_x": 0.9925959499784377,
+      "scale_y": 0.9925959499784377,
+      "near_identity": true
+    }
+  ]
+}

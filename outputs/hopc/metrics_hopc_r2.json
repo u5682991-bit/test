@@ -1,0 +1,55 @@
+{
+  "method": "hopc_like",
+  "model": "partial-affine",
+  "moving": "data\\processed\\sar_10m.tif",
+  "reference": "data\\processed\\optical_10m.tif",
+  "keypoints_moving": 4074,
+  "keypoints_reference": 3670,
+  "descriptors_moving": 4074,
+  "descriptors_reference": 3670,
+  "matches_after_ratio": 2401,
+  "matches_after_spatial_gate": 312,
+  "ransac_inliers": 30,
+  "inlier_ratio": 0.09615384615384616,
+  "inlier_rmse_pixels": 2.7305426597595215,
+  "transform_matrix": [
+    [
+      1.0000600071474184,
+      -0.017576097558159868,
+      0.5409450774894765
+    ],
+    [
+      0.017576097558159868,
+      1.0000600071474184,
+      -12.290724777626304
+    ]
+  ],
+  "sanity": {
+    "determinant": 1.0004289371010684,
+    "scale_x": 1.0002144455570858,
+    "scale_y": 1.0002144455570858,
+    "translation_pixels": 12.302623181103176,
+    "near_identity": true
+  },
+  "parameters": {
+    "max_points": 7000,
+    "quality": 0.002,
+    "min_distance": 4.0,
+    "orientations": 12,
+    "wavelengths": [
+      4.0,
+      8.0,
+      16.0,
+      24.0
+    ],
+    "gamma": 0.5,
+    "patch": 48,
+    "cells": 4,
+    "ratio": 0.98,
+    "ransac_thresh": 4.0,
+    "max_displacement": 50.0,
+    "mutual": false,
+    "sar_log": true
+  },
+  "assessment": "Usable HOPC-like candidate: inlier count and affine sanity are acceptable."
+}

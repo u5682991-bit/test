@@ -1,0 +1,49 @@
+{
+  "method": "cfog_like",
+  "model": "partial-affine",
+  "moving": "data\\processed\\sar_10m.tif",
+  "reference": "data\\processed\\optical_10m.tif",
+  "keypoints_moving": 4445,
+  "keypoints_reference": 3189,
+  "descriptors_moving": 4445,
+  "descriptors_reference": 3189,
+  "matches_after_ratio": 2804,
+  "matches_after_spatial_gate": 82,
+  "ransac_inliers": 11,
+  "inlier_ratio": 0.13414634146341464,
+  "inlier_rmse_pixels": 2.7335283756256104,
+  "transform_matrix": [
+    [
+      1.0027154413576158,
+      -0.009264605017797132,
+      3.4942115360385078
+    ],
+    [
+      0.009264605017797132,
+      1.0027154413576158,
+      -6.453624989958963
+    ]
+  ],
+  "sanity": {
+    "determinant": 1.005524089243134,
+    "scale_x": 1.0027582406757543,
+    "scale_y": 1.0027582406757543,
+    "translation_pixels": 7.33885479959969,
+    "near_identity": true
+  },
+  "assessment": "Usable candidate: inlier count is reasonable and affine sanity is close to the geocoded prior.",
+  "parameters": {
+    "max_points": 5000,
+    "quality": 0.003,
+    "min_distance": 5.0,
+    "orientations": 9,
+    "patch": 32,
+    "cells": 4,
+    "sigma": 1.2,
+    "ratio": 0.98,
+    "ransac_thresh": 5.0,
+    "max_displacement": 50.0,
+    "mutual": false,
+    "sar_log": true
+  }
+}

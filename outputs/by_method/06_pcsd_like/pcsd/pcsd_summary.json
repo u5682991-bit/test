@@ -1,0 +1,125 @@
+{
+  "best_by_inliers": {
+    "file": "outputs/pcsd\\metrics_pcsd_r9_median.json",
+    "moving": "data\\processed\\filtered\\sar_median.tif",
+    "inliers": 11,
+    "matches_after_gate": 46,
+    "inlier_ratio": 0.2391304347826087,
+    "rmse": 1.7239642143249512,
+    "translation_pixels": 1.95457272856455,
+    "scale_x": 0.999412202661604,
+    "scale_y": 0.999412202661604,
+    "near_identity": true
+  },
+  "best_usable_by_rmse": {
+    "file": "outputs/pcsd\\metrics_pcsd_r9_median.json",
+    "moving": "data\\processed\\filtered\\sar_median.tif",
+    "inliers": 11,
+    "matches_after_gate": 46,
+    "inlier_ratio": 0.2391304347826087,
+    "rmse": 1.7239642143249512,
+    "translation_pixels": 1.95457272856455,
+    "scale_x": 0.999412202661604,
+    "scale_y": 0.999412202661604,
+    "near_identity": true
+  },
+  "usable_count": 1,
+  "rows": [
+    {
+      "file": "outputs/pcsd\\metrics_pcsd_r1.json",
+      "moving": "data\\processed\\sar_10m.tif",
+      "inliers": 7,
+      "matches_after_gate": 23,
+      "inlier_ratio": 0.30434782608695654,
+      "rmse": 2.0436923503875732,
+      "translation_pixels": 141.99722420704077,
+      "scale_x": 0.8916030504019004,
+      "scale_y": 0.8916030504019004,
+      "near_identity": false
+    },
+    {
+      "file": "outputs/pcsd\\metrics_pcsd_r2.json",
+      "moving": "data\\processed\\sar_10m.tif",
+      "inliers": 8,
+      "matches_after_gate": 44,
+      "inlier_ratio": 0.18181818181818182,
+      "rmse": 2.0586628913879395,
+      "translation_pixels": 139.0878792560099,
+      "scale_x": 1.1697213533847604,
+      "scale_y": 1.1697213533847604,
+      "near_identity": false
+    },
+    {
+      "file": "outputs/pcsd\\metrics_pcsd_r3.json",
+      "moving": "data\\processed\\sar_10m.tif",
+      "inliers": 4,
+      "matches_after_gate": 16,
+      "inlier_ratio": 0.25,
+      "rmse": 1.7673574686050415,
+      "translation_pixels": 344.7539304107468,
+      "scale_x": 0.7185168449098585,
+      "scale_y": 0.7185168449098585,
+      "near_identity": false
+    },
+    {
+      "file": "outputs/pcsd\\metrics_pcsd_r5_median.json",
+      "moving": "data\\processed\\filtered\\sar_median.tif",
+      "inliers": 4,
+      "matches_after_gate": 10,
+      "inlier_ratio": 0.4,
+      "rmse": 0.8929474353790283,
+      "translation_pixels": 104.23947588148934,
+      "scale_x": 1.1228332971609805,
+      "scale_y": 1.1228332971609805,
+      "near_identity": false
+    },
+    {
+      "file": "outputs/pcsd\\metrics_pcsd_r6_diffusion.json",
+      "moving": "data\\processed\\filtered\\sar_diffusion.tif",
+      "inliers": 3,
+      "matches_after_gate": 6,
+      "inlier_ratio": 0.5,
+      "rmse": 0.8116520047187805,
+      "translation_pixels": 2.6749121010290504,
+      "scale_x": 1.0002576859931984,
+      "scale_y": 1.0002576859931984,
+      "near_identity": true
+    },
+    {
+      "file": "outputs/pcsd\\metrics_pcsd_r7.json",
+      "moving": "data\\processed\\sar_10m.tif",
+      "inliers": 4,
+      "matches_after_gate": 16,
+      "inlier_ratio": 0.25,
+      "rmse": 1.1815396547317505,
+      "translation_pixels": 23.18689169376247,
+      "scale_x": 0.9829261275717656,
+      "scale_y": 0.9829261275717656,
+      "near_identity": true
+    },
+    {
+      "file": "outputs/pcsd\\metrics_pcsd_r8_diffusion.json",
+      "moving": "data\\processed\\filtered\\sar_diffusion.tif",
+      "inliers": 7,
+      "matches_after_gate": 43,
+      "inlier_ratio": 0.16279069767441862,
+      "rmse": 1.6670514345169067,
+      "translation_pixels": 6.259246278728863,
+      "scale_x": 1.011815391092319,
+      "scale_y": 1.011815391092319,
+      "near_identity": true
+    },
+    {
+      "file": "outputs/pcsd\\metrics_pcsd_r9_median.json",
+      "moving": "data\\processed\\filtered\\sar_median.tif",
+      "inliers": 11,
+      "matches_after_gate": 46,
+      "inlier_ratio": 0.2391304347826087,
+      "rmse": 1.7239642143249512,
+      "translation_pixels": 1.95457272856455,
+      "scale_x": 0.999412202661604,
+      "scale_y": 0.999412202661604,
+      "near_identity": true
+    }
+  ]
+}

@@ -1,0 +1,23 @@
+{
+  "aoi_lonlat": [
+    104.4,
+    30.27,
+    104.48,
+    30.32
+  ],
+  "sar": {
+    "path": "data/processed/sar_10m.tif",
+    "crs": "EPSG:32648",
+    "width": 772,
+    "height": 558,
+    "nonzero_pct": 100.0
+  },
+  "optical": {
+    "path": "data/processed/optical_10m.tif",
+    "crs": "EPSG:32648",
+    "width": 772,
+    "height": 558,
+    "nonzero_pct": 100.0
+  },
+  "same_grid": true
+}

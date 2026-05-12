@@ -1,0 +1,54 @@
+{
+  "method": "rift_like_mim",
+  "model": "partial-affine",
+  "moving": "data\\processed\\sar_10m.tif",
+  "reference": "data\\processed\\optical_10m.tif",
+  "keypoints_moving": 3490,
+  "keypoints_reference": 2943,
+  "descriptors_moving": 3490,
+  "descriptors_reference": 2943,
+  "matches_after_ratio": 1598,
+  "matches_after_spatial_gate": 249,
+  "ransac_inliers": 29,
+  "inlier_ratio": 0.11646586345381527,
+  "inlier_rmse_pixels": 2.1412384510040283,
+  "transform_matrix": [
+    [
+      1.0020721727228592,
+      -0.002412488482622454,
+      1.4700326452258718
+    ],
+    [
+      0.002412488482622454,
+      1.0020721727228592,
+      -3.002010111170108
+    ]
+  ],
+  "sanity": {
+    "determinant": 1.0041544594461906,
+    "scale_x": 1.0020750767513333,
+    "scale_y": 1.0020750767513333,
+    "translation_pixels": 3.3426128530832493,
+    "near_identity": true
+  },
+  "parameters": {
+    "max_points": 7000,
+    "quality": 0.002,
+    "min_distance": 4.0,
+    "orientations": 16,
+    "wavelengths": [
+      4.0,
+      8.0,
+      16.0
+    ],
+    "gamma": 0.5,
+    "patch": 48,
+    "cells": 4,
+    "ratio": 0.98,
+    "ransac_thresh": 3.0,
+    "max_displacement": 35.0,
+    "mutual": false,
+    "sar_log": true
+  },
+  "assessment": "Usable RIFT-like candidate: inlier count and affine sanity are acceptable."
+}

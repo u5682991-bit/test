@@ -1,0 +1,49 @@
+{
+  "method": "cfog_like",
+  "model": "partial-affine",
+  "moving": "data\\processed\\sar_10m.tif",
+  "reference": "data\\processed\\optical_10m.tif",
+  "keypoints_moving": 4312,
+  "keypoints_reference": 3093,
+  "descriptors_moving": 4312,
+  "descriptors_reference": 3093,
+  "matches_after_ratio": 2685,
+  "matches_after_spatial_gate": 55,
+  "ransac_inliers": 9,
+  "inlier_ratio": 0.16363636363636364,
+  "inlier_rmse_pixels": 1.39291512966156,
+  "transform_matrix": [
+    [
+      0.9941753701005954,
+      -0.0028374901505064335,
+      1.9571467088583578
+    ],
+    [
+      0.0028374901505064335,
+      0.9941753701005954,
+      -0.8600956001763366
+    ]
+  ],
+  "sanity": {
+    "determinant": 0.98839271786501,
+    "scale_x": 0.9941794193529707,
+    "scale_y": 0.9941794193529707,
+    "translation_pixels": 2.1377997290293105,
+    "near_identity": true
+  },
+  "assessment": "Not reliable as a final registration transform; keep as an experimental round and inspect match/overlay outputs.",
+  "parameters": {
+    "max_points": 5000,
+    "quality": 0.003,
+    "min_distance": 5.0,
+    "orientations": 12,
+    "patch": 40,
+    "cells": 4,
+    "sigma": 1.5,
+    "ratio": 0.98,
+    "ransac_thresh": 3.0,
+    "max_displacement": 30.0,
+    "mutual": false,
+    "sar_log": true
+  }
+}

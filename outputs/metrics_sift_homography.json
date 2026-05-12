@@ -1,0 +1,29 @@
+{
+  "method": "sift",
+  "model": "homography",
+  "moving": "data\\processed\\sar_10m.tif",
+  "reference": "data\\processed\\optical_10m.tif",
+  "keypoints_moving": 8000,
+  "keypoints_reference": 6805,
+  "matches_after_ratio": 28,
+  "ransac_inliers": 5,
+  "inlier_ratio": 0.17857142857142858,
+  "inlier_rmse_pixels": 0.4859682023525238,
+  "transform_matrix": [
+    [
+      -1.5098490425720403,
+      -2.7039015892552953,
+      752.672501345372
+    ],
+    [
+      -0.6217548156502597,
+      -1.0606239741252794,
+      299.0437681883678
+    ],
+    [
+      -0.0020593281422567914,
+      -0.003598985031664871,
+      1.0
+    ]
+  ]
+}

@@ -1,0 +1,28 @@
+# Python/cache
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+
+# Editor/system
+.vscode/
+.DS_Store
+Thumbs.db
+
+# Large raw remote-sensing products
+data/raw/
+*.SAFE/
+*.SAFE.zip
+S1*.zip
+S2*.zip
+*.zip
+*.SAFE
+*.jp2
+
+# Large full-scene intermediate products
+data/processed/sar_full_vv_10m.tif
+
+# Temporary working files
+data/tmp/
+*.tmp
+

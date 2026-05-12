@@ -1,0 +1,81 @@
+{
+  "best_by_inliers": {
+    "file": "outputs\\metrics_cfog_r5.json",
+    "inliers": 20,
+    "matches_after_gate": 113,
+    "inlier_ratio": 0.17699115044247787,
+    "rmse": 2.494528293609619,
+    "near_identity": true,
+    "translation_pixels": 6.528179261849765,
+    "scale_x": 1.0038530341891632,
+    "scale_y": 1.0038530341891632
+  },
+  "best_by_rmse_with_min_10_inliers": {
+    "file": "outputs\\metrics_cfog_r5.json",
+    "inliers": 20,
+    "matches_after_gate": 113,
+    "inlier_ratio": 0.17699115044247787,
+    "rmse": 2.494528293609619,
+    "near_identity": true,
+    "translation_pixels": 6.528179261849765,
+    "scale_x": 1.0038530341891632,
+    "scale_y": 1.0038530341891632
+  },
+  "rounds": [
+    {
+      "file": "outputs\\metrics_cfog_r1.json",
+      "inliers": 5,
+      "matches_after_gate": 14,
+      "inlier_ratio": 0.35714285714285715,
+      "rmse": 1.4086637496948242,
+      "near_identity": true,
+      "translation_pixels": 14.183688706479186,
+      "scale_x": 1.0196385648502522,
+      "scale_y": 1.0196385648502522
+    },
+    {
+      "file": "outputs\\metrics_cfog_r2.json",
+      "inliers": 11,
+      "matches_after_gate": 82,
+      "inlier_ratio": 0.13414634146341464,
+      "rmse": 2.7335283756256104,
+      "near_identity": true,
+      "translation_pixels": 7.33885479959969,
+      "scale_x": 1.0027582406757543,
+      "scale_y": 1.0027582406757543
+    },
+    {
+      "file": "outputs\\metrics_cfog_r3.json",
+      "inliers": 15,
+      "matches_after_gate": 94,
+      "inlier_ratio": 0.1595744680851064,
+      "rmse": 2.7745416164398193,
+      "near_identity": true,
+      "translation_pixels": 4.45864406848305,
+      "scale_x": 0.9960622679532016,
+      "scale_y": 0.9960622679532016
+    },
+    {
+      "file": "outputs\\metrics_cfog_r4.json",
+      "inliers": 9,
+      "matches_after_gate": 55,
+      "inlier_ratio": 0.16363636363636364,
+      "rmse": 1.39291512966156,
+      "near_identity": true,
+      "translation_pixels": 2.1377997290293105,
+      "scale_x": 0.9941794193529707,
+      "scale_y": 0.9941794193529707
+    },
+    {
+      "file": "outputs\\metrics_cfog_r5.json",
+      "inliers": 20,
+      "matches_after_gate": 113,
+      "inlier_ratio": 0.17699115044247787,
+      "rmse": 2.494528293609619,
+      "near_identity": true,
+      "translation_pixels": 6.528179261849765,
+      "scale_x": 1.0038530341891632,
+      "scale_y": 1.0038530341891632
+    }
+  ]
+}

@@ -1,0 +1,24 @@
+{
+  "method": "akaze",
+  "model": "partial-affine",
+  "moving": "data\\processed\\sar_10m.tif",
+  "reference": "data\\processed\\optical_10m.tif",
+  "keypoints_moving": 4647,
+  "keypoints_reference": 2322,
+  "matches_after_ratio": 9,
+  "ransac_inliers": 2,
+  "inlier_ratio": 0.2222222222222222,
+  "inlier_rmse_pixels": 2.15791860682657e-05,
+  "transform_matrix": [
+    [
+      1.0341697779400671,
+      1.1322313758184916,
+      -234.07646451361876
+    ],
+    [
+      -1.1322313758184916,
+      1.0341697779400671,
+      176.9663459244231
+    ]
+  ]
+}

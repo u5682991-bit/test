@@ -1,0 +1,24 @@
+{
+  "method": "sift",
+  "model": "affine",
+  "moving": "data\\processed\\sar_10m.tif",
+  "reference": "data\\processed\\optical_10m.tif",
+  "keypoints_moving": 8000,
+  "keypoints_reference": 6805,
+  "matches_after_ratio": 28,
+  "ransac_inliers": 5,
+  "inlier_ratio": 0.17857142857142858,
+  "inlier_rmse_pixels": 1.1805846691131592,
+  "transform_matrix": [
+    [
+      0.30246072888044906,
+      0.5002490423326849,
+      344.0873863080597
+    ],
+    [
+      0.8114606508402746,
+      0.24516994367500802,
+      -2.800612963018688
+    ]
+  ]
+}

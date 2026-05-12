@@ -1,0 +1,92 @@
+{
+  "best_by_inliers": {
+    "file": "outputs\\metrics_rift_r3.json",
+    "inliers": 42,
+    "matches_after_gate": 265,
+    "inlier_ratio": 0.15849056603773584,
+    "rmse": 2.5178427696228027,
+    "near_identity": true,
+    "translation_pixels": 4.047600889905436,
+    "scale_x": 0.9925959499784377,
+    "scale_y": 0.9925959499784377
+  },
+  "best_by_rmse_with_min_20_inliers": {
+    "file": "outputs\\metrics_rift_r5.json",
+    "inliers": 29,
+    "matches_after_gate": 249,
+    "inlier_ratio": 0.11646586345381527,
+    "rmse": 2.1412384510040283,
+    "near_identity": true,
+    "translation_pixels": 3.3426128530832493,
+    "scale_x": 1.0020750767513333,
+    "scale_y": 1.0020750767513333
+  },
+  "rounds": [
+    {
+      "file": "outputs\\metrics_rift_r1.json",
+      "inliers": 27,
+      "matches_after_gate": 194,
+      "inlier_ratio": 0.13917525773195877,
+      "rmse": 2.5331621170043945,
+      "near_identity": true,
+      "translation_pixels": 3.178995354859328,
+      "scale_x": 0.9953598194795961,
+      "scale_y": 0.9953598194795961
+    },
+    {
+      "file": "outputs\\metrics_rift_r2.json",
+      "inliers": 21,
+      "matches_after_gate": 221,
+      "inlier_ratio": 0.09502262443438914,
+      "rmse": 2.4497342109680176,
+      "near_identity": true,
+      "translation_pixels": 1.551743245074182,
+      "scale_x": 0.9975575081107672,
+      "scale_y": 0.9975575081107672
+    },
+    {
+      "file": "outputs\\metrics_rift_r3.json",
+      "inliers": 42,
+      "matches_after_gate": 265,
+      "inlier_ratio": 0.15849056603773584,
+      "rmse": 2.5178427696228027,
+      "near_identity": true,
+      "translation_pixels": 4.047600889905436,
+      "scale_x": 0.9925959499784377,
+      "scale_y": 0.9925959499784377
+    },
+    {
+      "file": "outputs\\metrics_rift_r4.json",
+      "inliers": 23,
+      "matches_after_gate": 206,
+      "inlier_ratio": 0.11165048543689321,
+      "rmse": 2.288468599319458,
+      "near_identity": true,
+      "translation_pixels": 9.685330009687844,
+      "scale_x": 0.9808682197685525,
+      "scale_y": 0.9808682197685525
+    },
+    {
+      "file": "outputs\\metrics_rift_r5.json",
+      "inliers": 29,
+      "matches_after_gate": 249,
+      "inlier_ratio": 0.11646586345381527,
+      "rmse": 2.1412384510040283,
+      "near_identity": true,
+      "translation_pixels": 3.3426128530832493,
+      "scale_x": 1.0020750767513333,
+      "scale_y": 1.0020750767513333
+    },
+    {
+      "file": "outputs\\metrics_rift_r6.json",
+      "inliers": 11,
+      "matches_after_gate": 67,
+      "inlier_ratio": 0.16417910447761194,
+      "rmse": 2.171718120574951,
+      "near_identity": true,
+      "translation_pixels": 7.268382744617651,
+      "scale_x": 0.9921879422484331,
+      "scale_y": 0.9921879422484331
+    }
+  ]
+}

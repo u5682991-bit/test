@@ -1,0 +1,24 @@
+{
+  "method": "orb",
+  "model": "partial-affine",
+  "moving": "data\\processed\\sar_10m.tif",
+  "reference": "data\\processed\\optical_10m.tif",
+  "keypoints_moving": 8000,
+  "keypoints_reference": 7918,
+  "matches_after_ratio": 16,
+  "ransac_inliers": 2,
+  "inlier_ratio": 0.125,
+  "inlier_rmse_pixels": 2.412626417935826e-05,
+  "transform_matrix": [
+    [
+      -0.5631108153637201,
+      0.01767124372336447,
+      854.9020511237443
+    ],
+    [
+      -0.01767124372336447,
+      -0.5631108153637201,
+      504.31233295836324
+    ]
+  ]
+}

@@ -1,0 +1,54 @@
+{
+  "method": "pcsd_like",
+  "model": "partial-affine",
+  "moving": "data\\processed\\sar_10m.tif",
+  "reference": "data\\processed\\optical_10m.tif",
+  "keypoints_moving": 5759,
+  "keypoints_reference": 5520,
+  "descriptors_moving": 5759,
+  "descriptors_reference": 5520,
+  "matches_after_ratio": 612,
+  "matches_after_spatial_gate": 23,
+  "ransac_inliers": 7,
+  "inlier_ratio": 0.30434782608695654,
+  "inlier_rmse_pixels": 2.0436923503875732,
+  "transform_matrix": [
+    [
+      0.8829019922968218,
+      -0.12425808418077536,
+      134.105317409737
+    ],
+    [
+      0.12425808418077536,
+      0.8829019922968218,
+      -46.67949790794983
+    ]
+  ],
+  "sanity": {
+    "determinant": 0.7949559994859737,
+    "scale_x": 0.8916030504019004,
+    "scale_y": 0.8916030504019004,
+    "translation_pixels": 141.99722420704077,
+    "near_identity": false
+  },
+  "parameters": {
+    "max_points": 7000,
+    "quality": 0.002,
+    "min_distance": 4.0,
+    "orientations": 16,
+    "wavelengths": [
+      4.0,
+      8.0,
+      16.0
+    ],
+    "gamma": 0.5,
+    "patch": 48,
+    "cells": 4,
+    "ratio": 0.98,
+    "ransac_thresh": 4.0,
+    "max_displacement": 50.0,
+    "mutual": false,
+    "sar_log": true
+  },
+  "assessment": "Not reliable as a final registration transform; keep as an experimental round."
+}
