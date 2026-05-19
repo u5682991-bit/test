@@ -26,3 +26,13 @@ data/processed/sar_full_vv_10m.tif
 data/tmp/
 *.tmp
 
+# Deep-learning generated outputs
+dl/data/
+dl/outputs/runs/
+dl/outputs/full_pipeline/
+dl/outputs/optuna/
+dl/outputs/checkpoints/
+dl/outputs/slurm/
+dl/outputs/train_history.json
+dl/**/__pycache__/
+*.pt

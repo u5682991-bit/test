@@ -1,0 +1,41 @@
+{
+  "G2": {
+    "name": "ResNet18 Baseline",
+    "model": "resnet18",
+    "patch_size": 128
+  },
+  "G3": {
+    "name": "ResNet18 + CBAM",
+    "model": "resnet18_cbam",
+    "patch_size": 128
+  },
+  "G4": {
+    "name": "Pseudo-Siamese ResNet18",
+    "model": "ps_resnet18",
+    "patch_size": 128
+  },
+  "G5": {
+    "name": "Pseudo-Siamese ResNet18 + CBAM",
+    "model": "ps_resnet18_cbam",
+    "patch_size": 128
+  },
+  "G6": {
+    "name": "Pseudo-Siamese ResNet34 + CBAM",
+    "model": "ps_resnet34_cbam",
+    "patch_size": 128
+  },
+  "G7": {
+    "name": "Pseudo-Siamese ResNet50 + CBAM",
+    "model": "ps_resnet50_cbam",
+    "patch_size": 128
+  },
+  "G9": {
+    "name": "Final Proposed Multi-scale Model",
+    "model": "final_multiscale",
+    "backbone_options": ["resnet34", "resnet50"],
+    "patch_size": 256,
+    "patch_size_options": [[64, 128], [128, 256], [64, 128, 256]],
+    "default_patch_sizes": [64, 128, 256],
+    "fusion_weight_options": [0.2, 0.3, 0.5]
+  }
+}
