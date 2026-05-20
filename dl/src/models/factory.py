@@ -2,7 +2,7 @@ from __future__ import annotations
 
 from torch import nn
 
-from .matchers import MultiScalePseudoSiameseMatcher, PseudoSiameseMatcher, SingleStreamMatcher
+from .matchers import HSPMDABMMatcher, MultiScalePseudoSiameseMatcher, PseudoSiameseMatcher, SingleStreamMatcher
 
 
 def build_model(
@@ -39,4 +39,6 @@ def build_model(
             fusion_weights=fusion_weights,
             **common,
         )
+    if model_name == "g10_hspm_dabm":
+        return HSPMDABMMatcher(backbone=final_backbone, **common)
     raise ValueError(f"Unknown model_name: {model_name}")

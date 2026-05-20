@@ -19,6 +19,9 @@ from src.utils.metrics import binary_metrics
 
 
 def _suggest_final_multiscale(trial: optuna.Trial, model_name: str) -> tuple[str, tuple[int, ...], tuple[float, ...] | None]:
+    if model_name == "g10_hspm_dabm":
+        final_backbone = trial.suggest_categorical("final_backbone", ["resnet34", "resnet50"])
+        return final_backbone, (64, 128, 256), None
     if model_name != "final_multiscale":
         return "resnet34", (64, 128, 256), None
     final_backbone = trial.suggest_categorical("final_backbone", ["resnet34", "resnet50"])

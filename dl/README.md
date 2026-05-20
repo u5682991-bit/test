@@ -30,6 +30,7 @@ ps_resnet18_cbam      # G5
 ps_resnet34_cbam      # G6
 ps_resnet50_cbam      # G7
 final_multiscale      # G9, pseudo-siamese + CBAM + multi-scale fusion
+g10_hspm_dabm         # G10, HSPM + shared encoder + DABM + correlation matching
 ```
 
 G1 traditional baselines remain in `scripts/`. MAP-Net is left as a literature
@@ -45,6 +46,7 @@ G1: existing handcrafted scripts in ../scripts
 G2-G7: patch-based matching models
 G8: image-based MAP-Net-like comparison
 G9: patch-based pseudo-siamese CBAM model with multi-scale patch fusion
+G10: hierarchical sub-block partition + shared dual-branch encoder + DABM + correlation + weighted affine
 ```
 
 G9 exposes the requested design choices:
@@ -54,6 +56,22 @@ backbone: ResNet34 or ResNet50
 patch combinations: 64+128, 128+256, 64+128+256
 fusion weights: configurable, and searchable by Optuna
 ```
+
+G10 implements the newer high-precision registration design:
+
+```text
+SAR/Optical image
+-> hierarchical region/block partition
+-> shared-weight dual-branch ResNet encoder
+-> CBAM-style channel + spatial attention
+-> explicit SAR-vs-Optical correlation matrix
+-> softmax weighted sub-pixel coordinate refinement
+-> confidence-weighted affine estimation
+```
+
+Training still uses the existing patch matching supervision. Registration uses
+`dl/scripts/register_g10_hspm.py`, which consumes the trained G10 checkpoint and
+performs the correlation-based matching stage.
 
 The data split is image-pair first:
 
@@ -83,6 +101,7 @@ This runs:
 ```text
 build index
 train G2-G7/G9
+train G10
 optional Optuna Bayesian Optimization before final training
 run G8 MAP-Net-like image-based registration
 evaluate each model on test split
@@ -112,6 +131,12 @@ Estimate registration for one SAR-Optical pair:
 
 ```powershell
 python dl/scripts/register_pair.py --pairs dl/outputs/pairs.csv --checkpoint dl/outputs/runs/smoke_manual/checkpoints/best.pt --model ps_resnet18_cbam --sample-id 100
+```
+
+Estimate registration with G10:
+
+```powershell
+python dl/scripts/register_g10_hspm.py --pairs dl/outputs/pairs.csv --checkpoint dl/outputs/runs/G10_g10_hspm_dabm/checkpoints/best.pt --model g10_hspm_dabm --sample-id 100
 ```
 
 ## Training Logic

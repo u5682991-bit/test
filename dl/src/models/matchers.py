@@ -138,3 +138,46 @@ class MultiScalePseudoSiameseMatcher(nn.Module):
         stacked = torch.stack(logits, dim=0)
         return (stacked * self.fusion_weights.view(-1, 1, 1)).sum(dim=0)
 
+
+class HSPMDABMMatcher(nn.Module):
+    """G10 shared-weight dual-branch matcher for HSPM+DABM registration.
+
+    SAR and Optical patches use lightweight modality adapters and then share one
+    ResNet+CBAM encoder. The shared embedding is used both for patch-match
+    training and for explicit correlation matrices during registration.
+    """
+
+    def __init__(self, backbone: str = "resnet34", dropout: float = 0.2, **kwargs) -> None:
+        super().__init__()
+        self.sar_adapter = nn.Conv2d(1, 3, kernel_size=1, bias=False)
+        self.opt_adapter = nn.Identity()
+        self.shared_encoder = ResNetFeatureExtractor(backbone, in_channels=3, use_cbam=True, **kwargs)
+        dim = self.shared_encoder.out_dim
+        self.head = nn.Sequential(
+            nn.Dropout(dropout),
+            nn.Linear(dim * 4 + 1, 512),
+            nn.ReLU(inplace=True),
+            nn.Dropout(dropout),
+            nn.Linear(512, 1),
+        )
+
+    def encode_sar(self, sar: torch.Tensor) -> torch.Tensor:
+        return self.shared_encoder(self.sar_adapter(sar))
+
+    def encode_opt(self, opt: torch.Tensor) -> torch.Tensor:
+        return self.shared_encoder(self.opt_adapter(opt))
+
+    def encode_pair(self, sar: torch.Tensor, opt: torch.Tensor) -> tuple[torch.Tensor, torch.Tensor]:
+        return self.encode_sar(sar), self.encode_opt(opt)
+
+    def score_embeddings(self, sar_features: torch.Tensor, opt_features: torch.Tensor) -> torch.Tensor:
+        cosine = (sar_features * opt_features).sum(dim=1, keepdim=True)
+        fused = torch.cat(
+            [sar_features, opt_features, torch.abs(sar_features - opt_features), sar_features * opt_features, cosine],
+            dim=1,
+        )
+        return self.head(fused)
+
+    def forward(self, sar: torch.Tensor, opt: torch.Tensor) -> torch.Tensor:
+        fs, fo = self.encode_pair(sar, opt)
+        return self.score_embeddings(fs, fo)

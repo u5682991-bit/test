@@ -23,6 +23,15 @@ ARGS=(
   --g8-pca-dim "${G8_PCA_DIM:-64}"
   --g8-ratio "${G8_RATIO:-0.95}"
   --g8-ransac-thresh "${G8_RANSAC_THRESH:-5.0}"
+  --g10-region-size "${G10_REGION_SIZE:-256}"
+  --g10-block-size "${G10_BLOCK_SIZE:-128}"
+  --g10-region-step "${G10_REGION_STEP:-256}"
+  --g10-block-step "${G10_BLOCK_STEP:-128}"
+  --g10-search-radius "${G10_SEARCH_RADIUS:-192}"
+  --g10-threshold "${G10_THRESHOLD:-0.55}"
+  --g10-top-k "${G10_TOP_K:-4}"
+  --g10-temperature "${G10_TEMPERATURE:-0.05}"
+  --g10-batch-size "${G10_BATCH_SIZE:-64}"
 )
 
 if [[ -n "${SKIP_REGISTRATION:-}" ]]; then ARGS+=(--skip-registration); fi

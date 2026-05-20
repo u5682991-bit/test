@@ -37,5 +37,20 @@
     "patch_size_options": [[64, 128], [128, 256], [64, 128, 256]],
     "default_patch_sizes": [64, 128, 256],
     "fusion_weight_options": [0.2, 0.3, 0.5]
+  },
+  "G10": {
+    "name": "HSPM + Shared Encoder + DABM + Correlation + Weighted Affine",
+    "model": "g10_hspm_dabm",
+    "backbone_options": ["resnet34", "resnet50"],
+    "patch_size": 128,
+    "registration": {
+      "region_size": 256,
+      "block_size": 128,
+      "region_step": 256,
+      "block_step": 128,
+      "search_radius": 192,
+      "threshold": 0.55,
+      "top_k": 4
+    }
   }
 }

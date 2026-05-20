@@ -17,6 +17,7 @@ PATCH_MODELS = [
     ("G7", "ps_resnet50_cbam"),
     ("G8", "mapnet_like"),
     ("G9", "final_multiscale"),
+    ("G10", "g10_hspm_dabm"),
 ]
 
 PATCH_MODEL_NAMES = {model for group, model in PATCH_MODELS if group != "G8"}
@@ -58,7 +59,7 @@ def read_json(path: Path) -> dict:
 
 
 def model_batch_size(model: str, default_batch_size: int) -> int:
-    if model in {"ps_resnet50_cbam", "final_multiscale"} and default_batch_size >= 32:
+    if model in {"ps_resnet50_cbam", "final_multiscale", "g10_hspm_dabm"} and default_batch_size >= 32:
         return 16
     return default_batch_size
 
@@ -85,7 +86,7 @@ def optuna_trials_for_group(group: str, args: argparse.Namespace) -> int:
         return 30
     if group in {"G6", "G7"}:
         return 50
-    if group == "G9":
+    if group in {"G9", "G10"}:
         return 80
     return 0
 
@@ -262,6 +263,52 @@ def register_samples(args: argparse.Namespace, model: str, run_name: str, log_pa
     return results
 
 
+def register_g10_samples(args: argparse.Namespace, model: str, run_name: str, log_path: Path) -> list[dict]:
+    checkpoint = args.out_dir / "runs" / run_name / "checkpoints" / "best.pt"
+    results = []
+    for sample_id in args.registration_sample_ids:
+        output = run(
+            [
+                sys.executable,
+                "dl/scripts/register_g10_hspm.py",
+                "--pairs",
+                str(args.pairs),
+                "--checkpoint",
+                str(checkpoint),
+                "--model",
+                model,
+                "--sample-id",
+                str(sample_id),
+                "--device",
+                args.device,
+                "--region-size",
+                str(args.g10_region_size),
+                "--block-size",
+                str(args.g10_block_size),
+                "--region-step",
+                str(args.g10_region_step),
+                "--block-step",
+                str(args.g10_block_step),
+                "--search-radius",
+                str(args.g10_search_radius),
+                "--threshold",
+                str(args.g10_threshold),
+                "--top-k",
+                str(args.g10_top_k),
+                "--temperature",
+                str(args.g10_temperature),
+                "--batch-size",
+                str(args.g10_batch_size),
+            ],
+            log_path,
+            args.dry_run,
+        )
+        result = parse_last_json(output)
+        if result:
+            results.append(result)
+    return results
+
+
 def run_g8_mapnet(args: argparse.Namespace, log_path: Path) -> list[dict]:
     results = []
     for sample_id in args.registration_sample_ids:
@@ -327,6 +374,15 @@ def main() -> None:
     parser.add_argument("--g8-ratio", type=float, default=0.95)
     parser.add_argument("--g8-ransac-thresh", type=float, default=5.0)
     parser.add_argument("--g8-pretrained", action="store_true")
+    parser.add_argument("--g10-region-size", type=int, default=256)
+    parser.add_argument("--g10-block-size", type=int, default=128)
+    parser.add_argument("--g10-region-step", type=int, default=256)
+    parser.add_argument("--g10-block-step", type=int, default=128)
+    parser.add_argument("--g10-search-radius", type=int, default=192)
+    parser.add_argument("--g10-threshold", type=float, default=0.55)
+    parser.add_argument("--g10-top-k", type=int, default=4)
+    parser.add_argument("--g10-temperature", type=float, default=0.05)
+    parser.add_argument("--g10-batch-size", type=int, default=64)
     parser.add_argument("--skip-registration", action="store_true")
     parser.add_argument("--skip-existing", action="store_true")
     parser.add_argument("--save-every", type=int, default=0)
@@ -383,7 +439,12 @@ def main() -> None:
         optuna_best = run_optuna(args, group, model, log_path) if args.use_optuna else None
         train_model(args, group, model, run_name, log_path, optuna_best=optuna_best)
         eval_metrics = evaluate_model(args, model, run_name, log_path)
-        reg_results = [] if args.skip_registration else register_samples(args, model, run_name, log_path)
+        if args.skip_registration:
+            reg_results = []
+        elif group == "G10":
+            reg_results = register_g10_samples(args, model, run_name, log_path)
+        else:
+            reg_results = register_samples(args, model, run_name, log_path)
         record = {
             "group": group,
             "model": model,
