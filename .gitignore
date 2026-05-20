@@ -27,7 +27,10 @@ data/tmp/
 *.tmp
 
 # Deep-learning generated outputs
-dl/data/
+dl/data/**
+!dl/data/
+!dl/data/**/
+!dl/data/**/.gitkeep
 dl/outputs/runs/
 dl/outputs/full_pipeline/
 dl/outputs/optuna/
